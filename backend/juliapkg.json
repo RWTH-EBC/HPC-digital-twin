@@ -1,0 +1,10 @@
+{
+    "julia": "=1.12.5",
+    "packages": {
+        "ZIHsim": {
+            "uuid": "f921690e-13ff-4cbe-ae12-c5503691e9a0",
+            "dev": true,
+            "path": "src/it_zauber_digital_twin/agents_zih/ZIHsim"
+            }
+    }
+}

@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "it-zauber-digital-twin"
+version = "0.1.0"
+description = "Digital Twin Implementation"
+requires-python = "==3.11.*"
+dependencies = [
+    "FMPy==0.3.16",
+    "influxdb==5.3.1",
+    "numpy==2.3.5",
+    "paho-mqtt==1.6.1",
+    "pandas==2.3.3",
+    "polars==1.22.0",
+    "psutil==5.9.4",
+    "psycopg2-binary==2.9.9",
+    "requests==2.32.3",
+    "sqlalchemy==2.0.23",
+    "tqdm==4.66.1",
+    "wetterdienst==0.109.0",
+    "scikit-learn==1.7.2",
+    "juliacall==0.9.31",
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "pydantic>=2.0.0",
+    "pint-pandas>=0.6",
+    "pymoo>=0.6.1.6",
+    "dotenv>=0.9.9",
+    "ipykernel>=7.1.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["it_zauber_digital_twin*"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[project.scripts]
+digital-twin = "it_zauber_digital_twin.cli:main"
+

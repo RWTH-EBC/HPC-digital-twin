@@ -1,0 +1,1102 @@
+[
+    {
+        "id": "urn:ngsi-ld:claix_2018_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:claix_2018_sc_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:claix_2023_cdu_sc_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:claix_2023_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:cluster_kop6_rack_groups_pump10_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:cluster_kop6_rack_groups_pump11_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:cluster_kop6_racks_pressure_difference_setpoint",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "millibar_keep"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:cluster_sw23_rack_groups_pump12_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:cluster_sw23_rack_groups_pump13_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:cluster_sw23_racks_pressure_difference_setpoint",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "millibar_keep"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:fernkaelte_q_flow",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "kilowatt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:klima_kaelte_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:kop6_coolant_flow",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "m^3/h"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:kop6_coolant_temperature_warm",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "degree Celcius"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:kop6_fan_controller_air_temperature_warm_setpoint_mean",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "degree Celcius"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:kop6_pressure_difference_server_side_group_setpoint_mean",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "bar"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:kop6_valve_controller_air_temperature_cold_setpoint_mean",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "degree Celcius"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:kop6_water_temperature_cold_server_side_setpoint_mean",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "degree Celcius"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:kop6_water_temperature_warm_facility_side_mean",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "degree Celcius"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:num_allocated_cores",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        },
+        "Future_value": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        },
+        "Future_TimeInstant": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:num_allocated_gpus",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        },
+        "Future_value": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        },
+        "Future_TimeInstant": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:outside_pressure_mbar",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "millibar"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:outside_relative_humidity_pct",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "percent"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:outside_temperature_celsius",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "degree Celcius"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-100-1",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-100-2",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-100-3",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-143-1",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-143-2",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-144-1",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-144-2",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-145-1",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-145-2",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-146-1",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-146-2",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-147-1",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-147-2",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-148-1",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-148-2",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-149-1",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-149-2",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-200-1",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-200-2",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-200-3",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-243-1",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-243-2",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-244-1",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-244-2",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-245-1",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-245-2",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-246-1",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-246-2",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-247-1",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-247-2",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-248-1",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-248-2",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-249-1",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pow-kop6-mh-249-2",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pue",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pump16_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pump17_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pump18_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pump19_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pump20_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pump21_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pump22_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pump23_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pump24_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pump25_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pumps_inf_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pumps_kop6_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pumps_rkw01_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pumps_rkw02_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pumps_rkw03_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pumps_sw23_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw01_is_on",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw01_pump1_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw01_pump1_status",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "boolean"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw01_pump2_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw01_pump2_status",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "boolean"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw01_vents_rpm",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "rpm"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw01_water_temperature_only_liquid_cooling_internal_setpoint",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "degree Celcius"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw01pump_is_on",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw02_is_on",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw02_pump3_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw02_pump3_status",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "boolean"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw02_pump4_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw02_pump4_status",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "boolean"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw02_vents_rpm",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "rpm"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw02_water_temperature_only_liquid_cooling_internal_setpoint",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "degree Celcius"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw02pump_is_on",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw03_is_on",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw03_pump5_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw03_pump5_status",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "boolean"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw03_pump6_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw03_pump6_status",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "boolean"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw03_vents_rpm",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "rpm"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw03_water_temperature_only_liquid_cooling_internal_setpoint",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "degree Celcius"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw03pump_is_on",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw_and_pumps_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw_no_pump_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw_pump7_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw_pump8_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:rkw_pump9_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:sw23_air_temperature_cold_setpoint_mean",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "degree Celcius"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:sw23_coolant_flow",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "m^3/h"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:sw23_coolant_temperature_warm",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "degree Celcius"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:sw23_water_temperature_warm_mean",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "degree Celcius"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:t_water_warm_inf",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "degree_celsius"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:total_pumps_inf_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:total_rkw_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:vol_flow_inf",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "m^3/h"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:wt01_water_temperature_cold_facility_side_manual_setpoint",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "degree Celcius"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:wt02_water_temperature_cold_facility_side_manual_setpoint",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:wt03_water_temperature_cold_facility_side_manual_setpoint",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:wt04_water_temperature_cold_facility_side",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:wt04_water_temperature_cold_facility_side_manual_setpoint",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:wt04_water_temperature_warm_facility_side",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:wt07_pump14_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:wt07_pump15_power",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "watt"
+        }
+    }
+]

@@ -1,0 +1,12 @@
+{
+  "get_from_fiware": [
+  ],
+  "get_from_previous_agent_hpc": [
+  ],
+  "push_to_fiware": [
+    ["LZR.DLR.Racks-AK.HPC-Wirkleistung//value_pred", "watt"],
+    ["LZR.capella.Racks-E12.Wirkleistung//value_pred", "watt"],
+    ["LZR.alpha.Racks.HPC-Wirkleistung//value_pred", "watt"],
+    ["LZR.barnard.Racks-E12.Wirkleistung//value_pred", "watt"]
+  ]
+}

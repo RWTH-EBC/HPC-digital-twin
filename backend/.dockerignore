@@ -1,0 +1,64 @@
+# Python cache and artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environments (will be created fresh in container)
+.pixi/
+.venv/
+venv/
+env/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Docker
+.dockerignore
+docker-compose.yml
+docker-compose.*.yml
+
+# Testing and temporary files
+_temp*/
+*.log
+.pytest_cache/
+
+# FMU state files (runtime generated)
+fmu_states/
+
+# Lock files for predictions/optimizations (runtime generated)
+.prediction.lock
+.optimization.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation
+*.md
+docs/
+
+# Large data files (should be mounted or fetched at runtime if needed)
+# Uncomment if you don't need data in the image:
+# data/
+# *.parquet
+# *.csv

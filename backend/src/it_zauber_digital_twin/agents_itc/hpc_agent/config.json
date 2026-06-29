@@ -1,0 +1,11 @@
+{
+  "get_from_fiware": [
+    ["num_allocated_cores//value", "unitless"],
+    ["num_allocated_gpus//value", "unitless"]
+  ],
+  "push_to_fiware": [
+    ["claix_2018_power//value_pred", "watt"],
+    ["claix_2023_power//value_pred", "watt"]
+  ],
+  "use_quantile": "medium"
+}

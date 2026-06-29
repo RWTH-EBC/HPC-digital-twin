@@ -1,0 +1,11 @@
+__pycache__
+*.pyc
+*.egg-info
+data_v8.parquet
+*result*.parquet
+.ipynb_checkpoints
+dsfinal.txt
+_temp*
+.pixi
+.venv
+fmu_states

@@ -1,0 +1,48 @@
+{
+  "get_from_fiware": [
+    ["LZR.K21.KKR01.B08//value", "degree_celsius"],
+    ["LZR.K21.KKR02.B08//value", "degree_celsius"],
+    ["LZR.K21.KKR03.B08//value", "degree_celsius"],
+    ["LZR.K21.KKR04.B08//value", "degree_celsius"],
+    ["LZR.H01.HKR02.B20//value", "degree_celsius"],
+    ["LZR.H01.WUE00.B29.LN//value", "kilowatt"],
+    ["WPG.H01.ABG01.B01//value", "degree_celsius"]
+  ],
+  "get_from_previous_agent_hpc": [
+    ["LZR.DLR.Racks-AK.HPC-Wirkleistung//value_pred", "watt"],
+    ["LZR.capella.Racks-E12.Wirkleistung//value_pred", "watt"],
+    ["LZR.alpha.Racks.HPC-Wirkleistung//value_pred", "watt"],
+    ["LZR.barnard.Racks-E12.Wirkleistung//value_pred", "watt"]
+  ],
+  "push_to_fiware": [
+    ["LZR.E64.ABG10.B83.W//value_pred", "kilowatt"],
+    ["LZR.E69.ABG03.B83.W//value_pred", "kilowatt"],
+    ["LZR.E64.ABG11.B83.W//value_pred", "kilowatt"],
+    ["LZR.E69.ABG01.B83.W//value_pred", "kilowatt"],
+    ["LZR.E64.ABG12.B83.W//value_pred", "kilowatt"],
+    ["LZR.E69.ABG02.B83.W//value_pred", "kilowatt"],
+    ["LZR.E64.ABG13.B83.W//value_pred", "kilowatt"],
+    ["LZR.E69.ABG04.B83.W//value_pred", "kilowatt"],
+    ["LZR.E74.EIN01.B83.W//value_pred", "kilowatt"],
+    ["LZR.E72.EIN01.B83.W//value_pred", "kilowatt"],
+    ["LZR.E60.ABG10.B83.W//value_pred", "kilowatt"],
+    ["LZR.E60.ABG11.B83.W//value_pred", "kilowatt"],
+    ["LZR.E60.ABG12.B83.W//value_pred", "kilowatt"],
+    ["LZR.E60.ABG07.B83.W//value_pred", "kilowatt"],
+    ["LZR.E60.ABG08.B83.W//value_pred", "kilowatt"],
+    ["LZR.E60.ABG09.B83.W//value_pred", "kilowatt"],
+    ["LZR.E12.ABG02.B83.W//value_pred", "watt"],
+    ["LZR.E15.ABG03.B83.W//value_pred", "watt"],
+    ["WPG.H01.WPA01.B83//value_pred", "kilowatt"],
+    ["WPG.H01.WPA02.B83//value_pred", "kilowatt"],
+    ["WPG.H01.WPA03.B83//value_pred", "kilowatt"],
+    ["LZR.H01.HKR01.B29.LN//value_pred", "kilowatt"],
+    ["LZR.H01.HKR02.B29.LN//value_pred", "kilowatt"],
+    ["LZR.H01.ABG01.B29.MB//value_pred", "kilowatt"],
+    ["DLR.H01.WUE01.B29.MB//value_pred", "kilowatt"],
+    ["WPG.H01.ABG01.B29//value_pred", "kilowatt"],
+    ["pue//value_pred", "unitless"],
+    ["erf//value_pred", "unitless"],
+    ["ere//value_pred", "unitless"]
+  ]
+}

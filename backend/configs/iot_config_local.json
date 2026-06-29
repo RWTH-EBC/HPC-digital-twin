@@ -1,0 +1,22 @@
+{
+  "MQTT_PORT": 1883,
+  "INFLUX_PORT": 8086,
+  "INFLUX_DB_NAME": "influx_db_test",
+  "CB_PORT": 1026,
+  "IOTA_PORT": 4041,
+  "POSTGRES_PORT": 5432,
+  "POST_HEADERS": {
+    "Content-Type": "application/ld+json",
+    "NGSILD-Tenant": "test"
+  },
+  "POST_HEADERS_NO_LD": {
+    "Content-Type": "application/json",
+    "NGSILD-Tenant": "test"
+  },
+  "IOTA_HEADERS": {
+    "Content-Type": "application/json",
+    "fiware-service": "test",
+    "fiware-servicepath": "/first_test"
+  },
+  "APIKEY": "it-zauber-tud-core"
+}

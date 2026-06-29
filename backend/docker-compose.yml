@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  data-publisher:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: digital-twin --agent data_publisher
+    environment:
+      - DEPLOYMENT_ENV=${DEPLOYMENT_ENV:-local}
+      - TIMESTEP=${TIMESTEP:-120}
+    restart: unless-stopped
+
+  preprocessing-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: digital-twin --agent preprocessing_agent
+    environment:
+      - DEPLOYMENT_ENV=${DEPLOYMENT_ENV:-local}
+      - TIMESTEP=${TIMESTEP:-120}
+      - RUN_LIVE=${RUN_LIVE:-1}
+    restart: unless-stopped
+
+  coordinator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: uvicorn it_zauber_digital_twin.coordinator.api:create_app --host 0.0.0.0 --port 8000 --factory
+    environment:
+      - DEPLOYMENT_ENV=${DEPLOYMENT_ENV:-local}
+      - TIMESTEP=${TIMESTEP:-10}
+      - RUN_LIVE=${RUN_LIVE:-1}
+      - ENABLE_JULIA_SETUP=true
+      - JULIA_DEPOT_PATH=/opt/venv/julia_env/depot
+    ports:
+      - "8000:8000"
+    volumes:
+      - julia_env:/opt/venv/julia_env
+    restart: unless-stopped
+
+  state-saver:
+    profiles:
+      - itc
+      - ebc
+      - local
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: digital-twin --agent state_saver
+    environment:
+      - DEPLOYMENT_ENV=${DEPLOYMENT_ENV:-local}
+      - COORDINATOR_URL=${COORDINATOR_URL:-http://coordinator:8000}
+      - STATE_SAVE_INTERVAL_HOURS=${STATE_SAVE_INTERVAL_HOURS:-24}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    depends_on:
+      - coordinator
+    restart: unless-stopped
+
+volumes:
+  julia_env:

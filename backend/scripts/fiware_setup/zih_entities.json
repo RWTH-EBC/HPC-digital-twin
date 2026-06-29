@@ -1,0 +1,325 @@
+[
+    {
+        "id": "urn:ngsi-ld:LZR.E69.ABG01.B83.W",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.E60.ABG09.B83.W",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.alpha.Racks.HPC-Wirkleistung",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.E60.ABG12.B83.W",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.H01.ABG01.B29.MB",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.H01.HKR02.B20",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.K21.KKR04.B08",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.H01.WUE00.B29.LN",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.K21.KKR03.B08",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.E12.ABG02.B83.W",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.E64.ABG10.B83.W",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.E15.ABG03.B83.W",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.H01.HKR02.B29.LN",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:WPG.H01.ABG01.B29",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.E64.ABG11.B83.W",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.K21.KKR02.B08",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.E69.ABG04.B83.W",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.E72.EIN01.B83.W",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.E60.ABG07.B83.W",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:DLR.H01.WUE01.B29.MB",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:pue",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:erf",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.E60.ABG08.B83.W",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.capella.Racks-E12.Wirkleistung",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:WPG.H01.WPA01.B83",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:WPG.H01.WPA02.B83",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.E69.ABG03.B83.W",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.H01.HKR01.B29.LN",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:ere",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property",
+            "unit": "unitless"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.E60.ABG10.B83.W",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.barnard.Racks-E12.Wirkleistung",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.E60.ABG11.B83.W",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.E74.EIN01.B83.W",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.DLR.Racks-AK.HPC-Wirkleistung",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.K21.KKR01.B08",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.E64.ABG12.B83.W",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.E69.ABG02.B83.W",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:LZR.E64.ABG13.B83.W",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:WPG.H01.ABG01.B01",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    },
+    {
+        "id": "urn:ngsi-ld:WPG.H01.WPA03.B83",
+        "type": "Point",
+        "value": {
+            "value": "",
+            "type": "Property"
+        }
+    }
+]
