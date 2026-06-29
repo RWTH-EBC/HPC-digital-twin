@@ -1,0 +1,37 @@
+{
+  "LZR.K21.KKR01.B08//value": {
+    "name": "T_{\\text{KKR01}}^{\\text{set}}\\,\\left[^{\\circ}\\mathrm{C}\\right]",
+    "default_value": 35,
+    "min_value": 25,
+    "max_value": 40,
+    "unit": "°C"
+  },
+  "LZR.K21.KKR02.B08//value": {
+    "name": "T_{\\text{KKR02}}^{\\text{set}}\\,\\left[^{\\circ}\\mathrm{C}\\right]",
+    "default_value": 35,
+    "min_value": 25,
+    "max_value": 40,
+    "unit": "°C"
+  },
+  "LZR.K21.KKR03.B08//value": {
+    "name": "T_{\\text{KKR03}}^{\\text{set}}\\,\\left[^{\\circ}\\mathrm{C}\\right]",
+    "default_value": 35,
+    "min_value": 25,
+    "max_value": 40,
+    "unit": "°C"
+  },
+  "LZR.K21.KKR04.B08//value": {
+    "name": "T_{\\text{KKR04}}^{\\text{set}}\\,\\left[^{\\circ}\\mathrm{C}\\right]",
+    "default_value": 35,
+    "min_value": 25,
+    "max_value": 40,
+    "unit": "°C"
+  },
+  "WPG.H01.ABG01.B01//value": {
+    "name": "T_{\\text{ABG01}}^{\\text{set}}\\,\\left[^{\\circ}\\mathrm{C}\\right]",
+    "default_value": 70,
+    "min_value": 30,
+    "max_value": 100,
+    "unit": "°C"
+  }
+}

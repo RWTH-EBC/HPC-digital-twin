@@ -1,0 +1,32 @@
+{
+  "imagePath": "/images/inf-skizze-zih.svg",
+  "positions": {
+    "LZR.K21.KKR01.B08//value": {
+      "left": "25%",
+      "top": "73%"
+    },
+    "LZR.K21.KKR02.B08//value": {
+      "left": "33%",
+      "top": "71%"
+    },
+    "LZR.K21.KKR03.B08//value": {
+      "left": "41%",
+      "top": "73%"
+    },
+    "LZR.K21.KKR04.B08//value": {
+      "left": "7%",
+      "top": "73%"
+    },
+    "WPG.H01.ABG01.B01//value": {
+      "left": "69%",
+      "top": "8%"
+    }
+  },
+  "hints": {
+    "LZR.K21.KKR01.B08//value": "Setpoint temperature for KKR01 in °C",
+    "LZR.K21.KKR02.B08//value": "Setpoint temperature for KKR02 in °C",
+    "LZR.K21.KKR03.B08//value": "Setpoint temperature for KKR03 in °C",
+    "LZR.K21.KKR04.B08//value": "Setpoint temperature for KKR04 in °C",
+    "WPG.H01.ABG01.B01//value": "Setpoint temperature for ABG01 in °C"
+  }
+}

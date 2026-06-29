@@ -1,0 +1,92 @@
+{
+  "imagePath": "/images/inf-skizze-itc.png",
+  "positions": {
+    "kop6_water_temperature_cold_server_side_setpoint_mean//value": {
+      "left": "13%",
+      "top": "89%"
+    },
+    "kop6_valve_controller_air_temperature_cold_setpoint_mean//value": {
+      "left": "23%",
+      "top": "84%"
+    },
+    "kop6_fan_controller_air_temperature_warm_setpoint_mean//value": {
+      "left": "23%",
+      "top": "78%"
+    },
+    "sw23_air_temperature_cold_setpoint_mean//value": {
+      "left": "50%",
+      "top": "82%"
+    },
+    "rkw01_water_temperature_only_liquid_cooling_internal_setpoint//value": {
+      "left": "23%",
+      "top": "17%"
+    },
+    "rkw02_water_temperature_only_liquid_cooling_internal_setpoint//value": {
+      "left": "34%",
+      "top": "17%"
+    },
+    "rkw03_water_temperature_only_liquid_cooling_internal_setpoint//value": {
+      "left": "49.2%",
+      "top": "17%"
+    },
+    "wt01_water_temperature_cold_facility_side_manual_setpoint//value": {
+      "left": "21%",
+      "top": "34%"
+    },
+    "wt02_water_temperature_cold_facility_side_manual_setpoint//value": {
+      "left": "34%",
+      "top": "34%"
+    },
+    "wt03_water_temperature_cold_facility_side_manual_setpoint//value": {
+      "left": "48%",
+      "top": "34%"
+    },
+    "wt04_water_temperature_cold_facility_side_manual_setpoint//value": {
+      "left": "21%",
+      "top": "46%"
+    },
+    "cluster_kop6_racks_pressure_difference_setpoint//value": {
+      "left": "9%",
+      "top": "73%"
+    },
+    "cluster_sw23_racks_pressure_difference_setpoint//value": {
+      "left": "88%",
+      "top": "73%"
+    },
+    "kop6_pressure_difference_server_side_group_setpoint_mean//value": {
+      "left": "14%",
+      "top": "78%"
+    },
+    "rkw01_is_on//value": {
+      "left": "16.5%",
+      "top": "14%"
+    },
+    "rkw02_is_on//value": {
+      "left": "29.5%",
+      "top": "14%"
+    },
+    "rkw03_is_on//value": {
+      "left": "43.5%",
+      "top": "14%"
+    }
+  },
+  "hints": {
+    "kop6_water_temperature_cold_server_side_setpoint_mean//value": "Sollwert der Wassertemperatur, die von den CDUs in die Racks geht, CLAIX-2023",
+    "kop6_valve_controller_air_temperature_cold_setpoint_mean//value": "Sollwert der Lufttemperatur, die von den SCs zu den Racks geht, CLAIX-2023",
+    "kop6_fan_controller_air_temperature_warm_setpoint_mean//value": "Sollwert der Lufttemperatur, die von den Racks zurück in die SC geht, CLAIX-2023",
+    "sw23_air_temperature_cold_setpoint_mean//value": "Sollwert der Lufttemperatur, die von den SCs zu den Racks geht, CLAIX-2018",
+    "rkw01_water_temperature_only_liquid_cooling_internal_setpoint//value": "Sollwert der sekundärseitigen Austrittstemperatur des Wassers in WT01",
+    "rkw02_water_temperature_only_liquid_cooling_internal_setpoint//value": "Sollwert der sekundärseitigen Austrittstemperatur des Wassers in WT02",
+    "rkw03_water_temperature_only_liquid_cooling_internal_setpoint//value": "Sollwert der sekundärseitigen Austrittstemperatur des Wassers in WT03",
+    "wt01_water_temperature_cold_facility_side_manual_setpoint//value": "Sollwert der vom RKW01 bereitgestellten Wassertemperatur",
+    "wt02_water_temperature_cold_facility_side_manual_setpoint//value": "Sollwert der vom RKW02 bereitgestellten Wassertemperatur",
+    "wt03_water_temperature_cold_facility_side_manual_setpoint//value": "Sollwert der vom RKW03 bereitgestellten Wassertemperatur",
+    "wt04_water_temperature_cold_facility_side_manual_setpoint//value": "Sollwert der vom RKW04 bereitgestellten Wassertemperatur",
+    "cluster_kop6_racks_pressure_difference_setpoint//value": "Sollwert für den Druckunterschied zwischen Kalt- und Warmgang, CLAIX-2023?",
+    "cluster_sw23_racks_pressure_difference_setpoint//value": "Sollwert für den Druckunterschied zwischen Kalt- und Warmgang, CLAIX-2018?",
+    "kop6_pressure_difference_server_side_group_setpoint_mean//value": "Sollwert für den Druckunterschied zwischen Kalt- und Warmgang auf der Server-Seite, CLAIX-2023?",
+    "rkw01_is_on//value": "An- und Ausschaltsignal für RKW01",
+    "rkw02_is_on//value": "An- und Ausschaltsignal für RKW02",
+    "rkw03_is_on//value": "An- und Ausschaltsignal für RKW03"
+  }
+}

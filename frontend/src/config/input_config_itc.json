@@ -1,0 +1,115 @@
+{
+  "kop6_water_temperature_cold_server_side_setpoint_mean//value": {
+    "name": "T_{\\text{cl/cdu, out, CLAIX-2023}}^{\\text{set}}\\,\\left[^{\\circ}\\mathrm{C}\\right]",
+    "default_value": 33,
+    "min_value": 18,
+    "max_value": 33,
+    "unit": "°C"
+  },
+  "kop6_valve_controller_air_temperature_cold_setpoint_mean//value": {
+    "name": "T_{\\text{cl/sc, in, CLAIX-2023}}^{\\text{set}}\\,\\left[^{\\circ}\\mathrm{C}\\right]",
+    "default_value": 35,
+    "min_value": 18,
+    "max_value": 35,
+    "unit": "°C"
+  },
+  "kop6_fan_controller_air_temperature_warm_setpoint_mean//value": {
+    "name": "T_{\\text{cl/sc, out, CLAIX-2023}}^{\\text{set}}\\,\\left[^{\\circ}\\mathrm{C}\\right]",
+    "default_value": 47,
+    "min_value": 18,
+    "max_value": 47,
+    "unit": "°C"
+  },
+  "sw23_air_temperature_cold_setpoint_mean//value": {
+    "name": "T_{\\text{cl/sc, in, CLAIX\\text{-}2018}}^{\\text{set}}\\,\\left[^{\\circ}\\mathrm{C}\\right]",
+    "default_value": 31.73,
+    "min_value": 18,
+    "max_value": 33,
+    "unit": "°C"
+  },
+  "wt01_water_temperature_cold_facility_side_manual_setpoint//value": {
+    "name": "T_{\\text{sek, out, HE1}}^{\\text{set}}\\,\\left[^{\\circ}\\mathrm{C}\\right]",
+    "default_value": 27,
+    "min_value": 19,
+    "max_value": 31,
+    "unit": "°C"
+  },
+  "wt02_water_temperature_cold_facility_side_manual_setpoint//value": {
+    "name": "T_{\\text{sek, out, HE2}}^{\\text{set}}\\,\\left[^{\\circ}\\mathrm{C}\\right]",
+    "default_value": 27,
+    "min_value": 19,
+    "max_value": 31,
+    "unit": "°C"
+  },
+  "wt03_water_temperature_cold_facility_side_manual_setpoint//value": {
+    "name": "T_{\\text{sek, out, HE3}}^{\\text{set}}\\,\\left[^{\\circ}\\mathrm{C}\\right]",
+    "default_value": 27,
+    "min_value": 19,
+    "max_value": 31,
+    "unit": "°C"
+  },
+  "wt04_water_temperature_cold_facility_side_manual_setpoint//value": {
+    "name": "T_{\\text{sek, out, HE4}}^{\\text{set}}\\,\\left[^{\\circ}\\mathrm{C}\\right]",
+    "default_value": 30,
+    "min_value": 18,
+    "max_value": 31,
+    "unit": "°C"
+  },
+  "rkw01_water_temperature_only_liquid_cooling_internal_setpoint//value": {
+    "name": "T_{\\text{CT1, out}}^{\\text{set}}\\,\\left[^{\\circ}\\mathrm{C}\\right]",
+    "default_value": 28,
+    "min_value": 18,
+    "max_value": 30,
+    "unit": "°C"
+  },
+  "rkw02_water_temperature_only_liquid_cooling_internal_setpoint//value": {
+    "name": "T_{\\text{CT2, out}}^{\\text{set}}\\,\\left[^{\\circ}\\mathrm{C}\\right]",
+    "default_value": 28,
+    "min_value": 18,
+    "max_value": 30,
+    "unit": "°C"
+  },
+  "rkw03_water_temperature_only_liquid_cooling_internal_setpoint//value": {
+    "name": "T_{\\text{CT3, out}}^{\\text{set}}\\,\\left[^{\\circ}\\mathrm{C}\\right]",
+    "default_value": 28,
+    "min_value": 18,
+    "max_value": 30,
+    "unit": "°C"
+  },
+  "cluster_kop6_racks_pressure_difference_setpoint//value": {
+    "name": "\\Delta~p_{\\text{KOP6, racks}}^{\\text{set}}\\,\\left[\\mathrm{mbar}\\right]",
+    "default_value": 1100,
+    "min_value": 900,
+    "max_value": 1200,
+    "unit": "mbar"
+  },
+  "cluster_sw23_racks_pressure_difference_setpoint//value": {
+    "name": "\\Delta~p_{\\text{SW23, racks}}^{\\text{set}}\\,\\left[\\mathrm{mbar}\\right]",
+    "default_value": 500,
+    "min_value": 400,
+    "max_value": 600,
+    "unit": "mbar"
+  },
+  "kop6_pressure_difference_server_side_group_setpoint_mean//value": {
+    "name": "\\Delta~p_{\\text{KOP6, server}}^{\\text{set}}\\,\\left[\\mathrm{bar}\\right]",
+    "default_value": 2.2,
+    "min_value": 2.1,
+    "max_value": 2.3,
+    "unit": "bar"
+  },
+  "rkw01_is_on//value": {
+    "name": "\\text{CT1 On/Off}",
+    "default_value": true,
+    "unit": "bool"
+  },
+  "rkw02_is_on//value": {
+    "name": "\\text{CT2 On/Off}",
+    "default_value": true,
+    "unit": "bool"
+  },
+  "rkw03_is_on//value": {
+    "name": "\\text{CT3 On/Off}",
+    "default_value": true,
+    "unit": "bool"
+  }
+}
