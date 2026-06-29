@@ -1,0 +1,7 @@
+git+https://github.com/RWTH-EBC/ebcpy.git@master
+influxdb==5.3.1
+numpy==1.26.2
+pandas==1.5.3
+psycopg2==2.9.9
+Requests==2.31.0
+SQLAlchemy==2.0.23

@@ -1,0 +1,253 @@
+version: "3.8"
+services:
+  # @context file is served from here, we can replace the context file with our own one
+  ld-context:
+    labels:
+      org.fiware: 'tutorial'
+    image: httpd:alpine
+    hostname: context
+    container_name: fiware-ld-context
+    ports:
+        - "3004:80"
+    volumes:
+        - ./data-models:/usr/local/apache2/htdocs/
+    healthcheck:
+      test: (wget --server-response --spider --quiet  http://ld-context/ngsi-context.jsonld 2>&1 | awk 'NR==1{print $$2}'|  grep -q -e "200") || exit 1
+
+  # Mongo Database
+  mongo-db:
+    labels:
+      org.fiware: 'tutorial'
+    image: mongo:${MONGO_DB_VERSION}
+    hostname: mongo-db
+    container_name: db-mongo
+    expose:
+      - "${MONGO_DB_PORT}"
+    ports:
+      - "${MONGO_DB_PORT}:${MONGO_DB_PORT}" # localhost:27017
+    networks:
+      - default
+    volumes:
+      - mongo-db:/data/db
+      - mongo-config:/data/configdb
+    healthcheck:
+      test: |
+        host=`hostname --ip-address || echo '127.0.0.1'`; 
+        mongo --quiet $host/test --eval 'quit(db.runCommand({ ping: 1 }).ok ? 0 : 2)' && echo 0 || echo 1 
+      interval: 5s
+
+
+  mosquitto:
+    image: eclipse-mosquitto:2.0.10
+    restart: always
+    hostname: mosquitto
+    container_name: mosquitto
+    ports: 
+        - "1883:1883"
+    networks:
+        - default
+    volumes:
+        - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+
+  # IoT-Agent is configured for the JSON Protocol
+  iot-agent:
+    image: fiware/iotagent-json:${JSON_VERSION}
+    hostname: iot-agent
+    container_name: fiware-iot-agent
+    depends_on:
+      - mongo-db
+      - mosquitto
+    networks:
+      - default
+    expose:
+      - "${IOTA_NORTH_PORT}"
+      - "${IOTA_SOUTH_PORT}"
+    ports:
+      - "${IOTA_NORTH_PORT}:${IOTA_NORTH_PORT}" # localhost:4041
+      - "${IOTA_SOUTH_PORT}:${IOTA_SOUTH_PORT}" # localhost:7896
+    environment:
+      - IOTA_CB_HOST=orion # name of the context broker to update context
+      - IOTA_CB_PORT=${ORION_LD_PORT} # port the context broker listens on to update context
+      - IOTA_NORTH_PORT=${IOTA_NORTH_PORT}
+      - IOTA_REGISTRY_TYPE=mongodb #Whether to hold IoT device info in memory or in a database
+      - IOTA_LOG_LEVEL=DEBUG # The log level of the IoT Agent
+      - IOTA_TIMESTAMP=true # Supply timestamp information with each measurement
+      - IOTA_AUTOCAST=true # Ensure Ultralight number values are read as numbers not strings
+      - IOTA_MONGO_HOST=mongo-db # The host name of MongoDB
+      - IOTA_MONGO_PORT=${MONGO_DB_PORT} # The port mongoDB is listening on
+      - IOTA_MONGO_DB=iotagentjson # The name of the database used in mongoDB
+      - IOTA_HTTP_PORT=${IOTA_SOUTH_PORT} # The port used for device traffic over HTTP
+      - IOTA_PROVIDER_URL=http://iot-agent:${IOTA_NORTH_PORT}
+      - IOTA_DEFAULT_RESOURCE=/iot/json
+      - IOTA_APPEND_MODE=true
+      - IOTA_CB_NGSI_VERSION=ld # use NGSI-LD when sending updates for active attributes
+      - IOTA_JSON_LD_CONTEXT=https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld
+      - IOTA_FALLBACK_TENANT=openiot
+      - IOTA_DEFAULT_TRANSPORT=MQTT
+      - IOTA_MQTT_HOST=mosquitto
+      - IOTA_MQTT_PORT=1883
+      - IOTA_MQTT_PROTOCOL=mqtt
+      - IOTA_MQTT_QOS=1
+      - IOTA_MQTT_KEEPALIVE=60
+    healthcheck:
+      interval: 10s
+
+    user: "node"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "3"
+
+  pgadmin:
+    image: dpage/pgadmin4:6.15
+    restart: always
+    networks:
+      - default
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: secret
+      PGADMIN_LISTEN_PORT: 80
+    ports:
+      - "8080:80"
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+
+  timescale-db:
+    image: timescale/timescaledb-postgis:${TIMESCALE_VERSION}
+    hostname: timescale-db
+    container_name: db-timescale
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U orion" ]
+      interval: 15s
+      timeout: 15s
+      retries: 5
+      start_period: 60s
+    environment:
+      - POSTGRES_USER=orion
+      - POSTGRES_PASSWORD=orion
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    command: [ "postgres", "-c", "log_statement=none" ]
+    expose:
+      - "${TIMESCALE_PORT}"
+    ports:
+      - "${TIMESCALE_PORT}:${TIMESCALE_PORT}"
+    networks:
+      - default
+    volumes:
+      - timescale-db:/var/lib/postgresql/data
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "3"
+
+  orion:
+    labels:
+      org.fiware: 'tutorial'
+    platform: linux/amd64
+    image: quay.io/fiware/orion-ld:${ORION_LD_VERSION}
+    hostname: orion
+    container_name: fiware-orion
+    restart: always
+    depends_on:
+      - mongo-db
+      - timescale-db
+    networks:
+      - default
+    ports:
+      - "1026:1026"
+    environment:
+      - ORIONLD_TROE=TRUE
+      - ORIONLD_TROE_USER=orion
+      - ORIONLD_TROE_PWD=orion
+      - ORIONLD_TROE_HOST=timescale-db
+      - ORIONLD_MONGO_HOST=mongo-db
+      - ORIONLD_MULTI_SERVICE=TRUE
+      - ORIONLD_DISABLE_FILE_LOG=TRUE
+      - ORION_CORS=on
+      - ACCESS_CONTROL_ALLOW_ORIGIN=*
+      - ACCESS_CONTROL_ALLOW_METHODS=GET, POST, DELETE, PUT, PATCH, OPTIONS
+      - ACCESS_CONTROL_ALLOW_HEADERS=Origin, X-Requested-With, Content-Type, Accept, Authorization
+    command: -dbhost mongo-db -logLevel ERROR -troePoolSize 10 -forwarding
+    healthcheck:
+      test: curl --fail -s http://orion:${ORION_LD_PORT}/version || exit 1
+      interval: 10s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "3"
+
+  influxdb:
+      restart: unless-stopped
+      hostname: influxdb
+      container_name: influxdb
+      image: influxdb:1.8.3
+      volumes:
+        - InfluxdbDockerVol:/var/lib/influxdb
+        # - type: bind
+        #   source: ../../cert
+        #   target: /etc/ssl/influxdb
+        #   read_only: true
+      environment:
+        # - INFLUXDB_HTTP_HTTPS_ENABLED=true
+        # - INFLUXDB_HTTP_HTTPS_CERTIFICATE=/etc/ssl/influxdb/server_certificate.pem
+        # - INFLUXDB_HTTP_HTTPS_PRIVATE_KEY=/etc/ssl/influxdb/private_key.pem
+        # Add these for debugging
+        - INFLUXDB_HTTP_LOG_ENABLED=true
+        - INFLUXDB_LOGGING_LEVEL=debug
+        - INFLUXDB_HTTP_CORS_ENABLED=true
+        - INFLUXDB_HTTP_CORS_ALLOWED_ORIGINS=*
+        - INFLUXDB_HTTP_CORS_ALLOWED_METHODS=HEAD,GET,POST,PUT,PATCH,DELETE
+        - INFLUXDB_HTTP_CORS_ALLOWED_HEADERS=Accept,Accept-Language,Content-Language,Content-Type,Authorization,Access-Control-Allow-Origin
+      networks:
+        - default
+      ports:
+        - "8086:8086"
+      logging:
+        driver: "json-file"
+        options:
+          max-size: "100m"
+          max-file: "3"
+
+  influx_agent:
+    container_name: influx_agent
+    build:
+      dockerfile: "influx_agent/Dockerfile"
+    depends_on:
+      - influxdb
+    networks:
+      - default
+    environment:
+      - SYNC_INTERVAL=10
+    restart: on-failure
+    command: python agent_influx.py
+    volumes:
+      - ./influx_agent/app:/app
+
+
+networks:
+  default:
+    labels:
+      org.fiware: 'tutorial'
+    ipam:
+      config:
+        - subnet: 172.18.1.0/24
+
+volumes:
+  timescale-db: ~
+  InfluxdbDockerVol: ~
+  pgadmin-data: ~
+  mongo-db: ~
+  mongo-config: ~
+  crate:
+    name: crate
+  grafana:
+    name: grafana
+  data-models:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${PWD}/data-models

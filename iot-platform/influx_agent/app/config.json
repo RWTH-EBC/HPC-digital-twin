@@ -1,0 +1,8 @@
+{
+  "INFLUX_NAME": "influxdb",
+  "INFLUX_PORT": 8086,
+  "INFLUX_DB_NAME": "influx_db_test",
+  "POSTGRES_IP": "timescale-db:5432"
+}
+
+
