@@ -1,6 +1,22 @@
 version: '3.8'
 
 services:
+  # One-shot provisioning of FIWARE entities/devices for the active
+  # DEPLOYMENT_ENV. Remembers the last provisioned env in the fiware_state
+  # volume: re-runs clean-and-create when the env changes, otherwise only
+  # verifies all entities exist and re-runs clean-and-create if any is missing.
+  # Assumes the iot-platform (Orion-LD / IoT-Agent) is already reachable.
+  fiware-init:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python /app/scripts/fiware_setup/clean_and_create.py
+    environment:
+      - DEPLOYMENT_ENV=${DEPLOYMENT_ENV:-local}
+    volumes:
+      - fiware_state:/opt/fiware_state
+    restart: "no"
+
   data-publisher:
     build:
       context: .
@@ -9,6 +25,9 @@ services:
     environment:
       - DEPLOYMENT_ENV=${DEPLOYMENT_ENV:-local}
       - TIMESTEP=${TIMESTEP:-120}
+    depends_on:
+      fiware-init:
+        condition: service_completed_successfully
     restart: unless-stopped
 
   preprocessing-agent:
@@ -20,6 +39,9 @@ services:
       - DEPLOYMENT_ENV=${DEPLOYMENT_ENV:-local}
       - TIMESTEP=${TIMESTEP:-120}
       - RUN_LIVE=${RUN_LIVE:-1}
+    depends_on:
+      fiware-init:
+        condition: service_completed_successfully
     restart: unless-stopped
 
   coordinator:
@@ -37,6 +59,9 @@ services:
       - "8000:8000"
     volumes:
       - julia_env:/opt/venv/julia_env
+    depends_on:
+      fiware-init:
+        condition: service_completed_successfully
     restart: unless-stopped
 
   state-saver:
@@ -54,8 +79,12 @@ services:
       - STATE_SAVE_INTERVAL_HOURS=${STATE_SAVE_INTERVAL_HOURS:-24}
       - LOG_LEVEL=${LOG_LEVEL:-INFO}
     depends_on:
-      - coordinator
+      coordinator:
+        condition: service_started
+      fiware-init:
+        condition: service_completed_successfully
     restart: unless-stopped
 
 volumes:
   julia_env:
+  fiware_state:
