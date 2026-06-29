@@ -1,7 +1,7 @@
 {
   "MQTT_PORT": 1883,
   "INFLUX_PORT": 8086,
-  "INFLUX_DB_NAME": "influx_db_test",
+  "INFLUX_DB_NAME": "influx_db_itc",
   "CB_PORT": 1026,
   "IOTA_PORT": 4041,
   "POSTGRES_PORT": 5432,

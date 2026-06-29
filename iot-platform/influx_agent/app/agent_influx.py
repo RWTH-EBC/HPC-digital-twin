@@ -16,13 +16,32 @@ from utils import get_sql_df, get_sql_engine
 
 SYNC_INTERVAL = os.environ.get('SYNC_INTERVAL')
 
+
+def resolve_influx_db_name(fallback: str) -> str:
+    """Resolve the InfluxDB database name for the active DEPLOYMENT_ENV.
+
+    Data is separated per deployment env into its own database so the
+    dashboard only shows variables of the current env. 'local' and 'ebc'
+    are aliased to 'itc'. If DEPLOYMENT_ENV is unset/unknown, falls back to
+    the value from config.json.
+    """
+    env_name = os.environ.get('DEPLOYMENT_ENV')
+    if env_name is None:
+        return fallback
+    if env_name in ('local', 'ebc'):
+        env_name = 'itc'
+    if env_name not in ('itc', 'zih'):
+        return fallback
+    return f'influx_db_{env_name}'
+
+
 class InfluxAgent:
     with open(Path(__file__).parent / 'config.json') as f:
         config = json.load(f)
 
     INFLUX_NAME = config['INFLUX_NAME']
     INFLUX_PORT = config['INFLUX_PORT']
-    INFLUX_DB_NAME = config['INFLUX_DB_NAME']
+    INFLUX_DB_NAME = resolve_influx_db_name(config['INFLUX_DB_NAME'])
 
     def __init__(self,
                  host=None,

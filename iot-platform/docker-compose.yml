@@ -221,6 +221,7 @@ services:
       - default
     environment:
       - SYNC_INTERVAL=10
+      - DEPLOYMENT_ENV=${DEPLOYMENT_ENV:-itc}
     restart: on-failure
     command: python agent_influx.py
     volumes:

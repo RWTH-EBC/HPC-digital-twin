@@ -16,6 +16,21 @@ def get_project_root() -> Path:
     raise FileNotFoundError("Could not find project root (pyproject.toml not found)")
 
 
+def get_influx_db_name() -> str:
+    """Resolve the InfluxDB database name for the active DEPLOYMENT_ENV.
+
+    Data is separated per deployment env into its own database so the
+    dashboard only shows variables of the current env. 'local' and 'ebc'
+    are aliased to 'itc' (consistent with coordinator_loader.which_deployment_env).
+    """
+    env_name = os.getenv("DEPLOYMENT_ENV", "itc")
+    if env_name in ["local", "ebc"]:
+        env_name = "itc"
+    if env_name not in ["itc", "zih"]:
+        env_name = "itc"
+    return f"influx_db_{env_name}"
+
+
 def get_iot_config() -> dict:
     project_root = get_project_root()
     config_dir = project_root / "configs"
@@ -46,6 +61,10 @@ def get_iot_config() -> dict:
     config["IOTA_URL"] = iota_url
     config["POSTGRES_IP"] = postgres_ip
     config["HOST"] = host
+
+    # Per-deployment-env database; overrides the static fallback in the
+    # config file so itc/zih data live in separate InfluxDB databases.
+    config["INFLUX_DB_NAME"] = get_influx_db_name()
     
     return config
 
